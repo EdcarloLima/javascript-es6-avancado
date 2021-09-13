@@ -42,8 +42,34 @@ const obj2 = {
 };
 
 const it2 = obj2[Symbol.iterator]();
-console.log(it.next());
+console.log(it2.next());
 
 for (let value of obj2) {
+    console.log(value);
+}
+
+// Generators
+function* hello() {
+    console.log('Hello');
+    yield 1;
+    console.log('From');
+    const value = yield 2;
+    console.log(value);
+}
+const it3 = hello();
+console.log(it3.next());
+console.log(it3.next());
+console.log(it3.next('End'));
+
+// Generator em objetos para criar interadores
+const obj3 = {
+    values: [5, 6, 7, 8],
+    *[Symbol.iterator]() {
+        for (let i = 0; i < this.values.length; i++) {
+            yield this.values[i];
+        }
+    }
+};
+for (let value of obj3) {
     console.log(value);
 }
