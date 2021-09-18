@@ -24,7 +24,7 @@ onde você escreve o teste antes do código, faz o mesmo passar e refatorar o c�
 # Ciclo
 * Escrita do teste
 * Escrita do código
-* Refatoração
+* Refatoração7
 
 # Vantagens
 * Feedback rápidos
